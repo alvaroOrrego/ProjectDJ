@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Juegos</title>
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--FONTSAWESOME-->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/PaginaJuegosDet.css">
+
+</head>
+<body>
+<!--INICIO MENU-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <img src="Imagenes/Logo/logofrikitime.png" alt="Logo" id="logo">
+      </a>
+  
+      <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="PaginaPrincipal.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              Inicio
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
+              <i class="fas fa-comment-dollar"></i>
+              Venta
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="PaginaPerifericosDet.html"><i class="fas fa-headphones"></i>  Perifericos</a>
+              <a class="dropdown-item" href="PaginaConsolasDet.html"><i class="fab fa-playstation"></i> Consolas</a>
+              <a class="dropdown-item" href="PaginaJuegosDet.html"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a class="dropdown-item" href="PaginaFunkosDet.html"><i class="fas fa-dice-one"></i>   Funko Pop</a>
+            </div>
+            
+          </li>
+          <li class="nav-item active">
+            <a href="Contacto.html" class="nav-link">
+              <i class="fas fa-envelope"></i>
+              Contacto
+            </a>
+          </li>
+          <li class="nav-item dropdown" id="apiGhibli">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
+              <i class="fas fa-asterisk"></i>
+              Friki-Wiki
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="apiGhibli.html"><i class="fas fa-hand-point-right"></i> Wiki Ghibli</a>
+              <a class="dropdown-item" href="apiAnime.html"><i class="fas fa-hand-point-right"></i> Wiki Animes</a>
+            </div>
+          </li>
+        </ul>
+
+        <a href="Login.html" role="button" class="btn btn-light mr-sm-4">
+          <i class="fas fa-user"></i>
+          Iniciar Sesión          
+        </a>
+        
+        <a href="Registro.html" role="button" class="btn btn-light mr-sm-4">
+            <i class="fas fa-jedi"></i>
+            Registrarse
+        </a>
+
+        <p> </p>
+
+        <input type="search" id="input-search" placeholder="Buscar . . .">
+        <button type="button" class="btn btn-light mr-sm-4"><i class="fas fa-search"></i></button>
+  
+        <div class="content-search">
+          <div class="content-table">
+            <table id="table">
+              <thead>
+                <tr>
+                  <td></td>
+                </tr>
+              </thead>
+  
+              <tbody>
+                <tr>
+                  <td><a href="PaginaConsolasDet.html">Consolas</a></td>
+                </tr>
+  
+                <tr>
+                  <td><a href="PaginaFunkosDet.html">Funko pop's</a></td>
+                </tr>
+  
+                <tr>
+                  <td><a href="PaginaPerifericosDet.html">Perifericos</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="PaginaDetalles.html">Detalles</a></td>
+                </tr>
+                <tr>
+                  <td><a href="apiGhibli.html">Wiki Ghibli</a></td>
+                </tr>
+                <tr>
+                  <td><a href="apiAnime.html">Wiki Animes</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  
+    </nav>
+  </div>
+  
+<!--TERMINO MENU-->
+  <p></p>
+<!--INICIO CARD-->
+  <div class="container-fluid"></div>
+  <h1 class="text-center">VIDEOJUEGOS</h1>
+  
+  <p></p>
+  
+  <div class="container-fluid">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top"
+          src="Imagenes/Videojuegos/marions.jpg"
+          alt="Super Smash Bros">
+        <div class="card-body">
+          <h5 class="card-title">MARIO KART 8 DELUXE - NINTENDO SWITCH</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">49.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" 
+          src="Imagenes/Videojuegos/outridersps4.jpg"
+          alt="Blood borne PS4">
+        <div class="card-body">
+          <h5 class="card-title">OUTRIDERS - PS4</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">44.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="Imagenes/Videojuegos/gearsofwar.jpg"
+          alt="Gears of wars xbox one">
+        <div class="card-body">
+          <h5 class="card-title">GEARS OF WARS Ultimate Edition - XBOX ONE</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">29.990 $ CLP</small>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  <p></p>
+  
+  <div class="container-fluid">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top"
+          src="Imagenes/Videojuegos/skyrim.jpg"
+          alt="Skyrim Pc">
+        <div class="card-body">
+          <h5 class="card-title">THE ELDER SCROLLS V SKYRIM - PC (Key STEAM)</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">29.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="Imagenes/Videojuegos/codxbox.jpg"
+          alt="COD:MW XBOX ONE">
+        <div class="card-body">
+          <h5 class="card-title">COD: MODERN WARFARE - XBOX ONE</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">44.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" 
+          src="Imagenes/Videojuegos/spiderman.jpg"
+          alt="Spider man ps5">
+        <div class="card-body">
+          <h5 class="card-title">SPIDER MAN Miles Morales - PS5</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">54.990 $ CLP</small>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  <p></p>
+  
+  <div class="container-fluid">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" 
+          src="Imagenes/Videojuegos/godofwar.jpg"
+          alt="God of war ps4">
+        <div class="card-body">
+          <h5 class="card-title">GOD OF WAR - PS4</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">49.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" 
+          src="Imagenes/Videojuegos/lilnightmares.jpg"
+          alt="Lil nightmares NSwitch">
+        <div class="card-body">
+          <h5 class="card-title">LITTLE NIGHTMARES Complete Edition - NINTENDO SWITCH</h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">28.990 $ CLP</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" 
+          src="Imagenes/Videojuegos/diablo3.jpg"
+          alt="Diablo 3 pc">
+        <div class="card-body">
+          <h5 class="card-title">DIABLO 3 - PC (Key Battle.net) </h5>
+          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">10.990 $ CLP</small>
+        </div>
+      </div>
+      
+    </div>
+
+    <br>
+    <div class="d-flex justify-content-center" id="tiempo">
+      <div class="card weather">
+          <img src="Imagenes/iconoApiClima/2639.png" class="card-img-top weather-icon" alt="Sin Dato" id="imagen-clima">
+          <div class="card-body">
+              <h5 class="card-title weather-descrip">Sin Datos</h5>
+              <p class="card-text weather-temp"><b>geolocalización no compartida</b><br><b></b></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <p><br><br><small id="emailHelp" class="form-text text-muted text-center">Todos los derechos reservados © Friki Blinders, 2021</small><br></p>
+
+<!--TERMINO CARD-->
+
+<!--OTROS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="JS/jquery.js"></script>
+    <script src="JS/jquery.dataTables.min.js"></script>
+    <script src="JS/search.js"></script>
+    <script src="JS/openWeatherMap.js"></script>
+</body>
+</html>
