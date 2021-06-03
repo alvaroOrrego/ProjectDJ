@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +14,7 @@
   <!--FONTSAWESOME-->
   <link rel="stylesheet" href="fontawesome/css/all.min.css">
   <!--CSS-->
-  <link rel="stylesheet" href="CSS/PaginaPrincipal.css">
+  <link rel="stylesheet" href="{% static 'core/css/PaginaPrincipal.css' %}">
 
 </head>
 
@@ -22,7 +24,7 @@
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand">
-        <img src="Imagenes/Logo/logofrikitime.png" alt="Logo" id="logo">
+        <img src="{% static 'core/img/Logo/logofrikitime.png' %}" alt="Logo" id="logo">
       </a>
 
       <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
@@ -31,7 +33,7 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a href="PaginaPrincipal.html" class="nav-link">
+            <a href="{% url 'principal' %}" class="nav-link">
               <i class="fas fa-home"></i>
               Inicio
             </a>
@@ -50,7 +52,7 @@
             </div>
           </li>
           <li class="nav-item active">
-            <a href="Contacto.html" class="nav-link">
+            <a href="{% url 'contacto' %}" class="nav-link">
               <i class="fas fa-envelope"></i>
               Contacto
             </a>
