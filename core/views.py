@@ -16,3 +16,12 @@ def funkos(request):
 
 def consolas(request):
     return render(request, 'core/PaginaConsolasDet.html')
+
+def login (request):
+    return render(request, 'core/Login.html')
+
+def juegos (request):
+    return render(request, 'core/PaginaJuegosDet.html')
+
+def detalles (request):
+    return render(request, 'core/PaginaDetalles.html')

@@ -47,7 +47,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i>Perifericos</a>
               <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
-              <a class="dropdown-item" href="PaginaJuegosDet.html"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a class="dropdown-item" href="{% url 'juegos' %}"><i class="fas fa-gamepad"></i> Videojuegos</a>
               <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
             </div>
           </li>
@@ -68,11 +68,9 @@
             </div>
           </li>
         </ul>
-<!--Api Openweather map-->
-        
-<!--Api Openweather map final-->
 
-        <a href="Login.html" role="button" class="btn btn-light mr-sm-4">
+
+        <a href="{% url 'login' %}" role="button" class="btn btn-light mr-sm-4">
           <i class="fas fa-user"></i>
           Iniciar Sesión
         </a>
@@ -109,10 +107,10 @@
                   <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaJuegosDet.html">Videouegos</a></td>
+                  <td><a href="{% url 'juegos' %}">Videouegos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaDetalles.html">Detalles</a></td>
+                  <td><a href="{% url 'detalles' %}">Detalles</a></td>
                 </tr>
                 <tr>
                   <td><a href="apiGhibli.html">Wiki Ghibli</a></td>
