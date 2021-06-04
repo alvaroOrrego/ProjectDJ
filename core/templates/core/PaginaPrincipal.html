@@ -45,10 +45,10 @@
               Venta
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="PaginaPerifericosDet.html"><i class="fas fa-headphones"></i>Perifericos</a>
-              <a class="dropdown-item" href="PaginaConsolasDet.html"><i class="fab fa-playstation"></i> Consolas</a>
+              <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i>Perifericos</a>
+              <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
               <a class="dropdown-item" href="PaginaJuegosDet.html"><i class="fas fa-gamepad"></i> Videojuegos</a>
-              <a class="dropdown-item" href="PaginaFunkosDet.html"><i class="fas fa-dice-one"></i> Funko Pop</a>
+              <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
             </div>
           </li>
           <li class="nav-item active">
@@ -98,15 +98,15 @@
 
               <tbody>
                 <tr>
-                  <td><a href="PaginaConsolasDet.html">Consolas</a></td>
+                  <td><a href="{% url 'consolas' %}">Consolas</a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="PaginaFunkosDet.html">Funko pop's</a></td>
+                  <td><a href="{% url 'funkos' %}">Funko pop's</a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="PaginaPerifericosDet.html">Perifericos</a></td>
+                  <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
                 </tr>
                 <tr>
                   <td><a href="PaginaJuegosDet.html">Videouegos</a></td>
@@ -146,31 +146,31 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active img-fluid imagen 1">
-            <img class="d-block w-50" src="Imagenes/CarruselPrincipal/gaming-pc-1200x675.jpg" alt="Perifericos">
+            <img class="d-block w-50" src="{% static 'core/img/CarruselPrincipal/gaming-pc-1200x675.jpg' %}" alt="Perifericos">
             <div class="carousel-caption d-none d-md-block">
               <h5>Perifericos</h5>
-              <a href=PaginaPerifericosDet.html>VER MÁS... </a>
+              <a href="{% url 'perifericos' %}">VER MÁS... </a>
             </div>
           </div>
 
           <div class="carousel-item img-fluid imagen 2">
-            <img class="d-block w-50" src="Imagenes/CarruselPrincipal/funko_pops.png" alt="Funkos">
+            <img class="d-block w-50" src="{% static 'core/img/CarruselPrincipal/funko_pops.png' %}" alt="Funkos">
             <div class="carousel-caption d-none d-md-block">
               <h5>Funko Pop's</h5>
-              <a href=PaginaFunkosDet.html>VER MÁS... </a>
+              <a href="{% url 'funkos' %}">VER MÁS... </a>
             </div>
           </div>
 
           <div class="carousel-item img-fluid imagen 3">
-            <img class="d-block w-50" src="Imagenes/CarruselPrincipal/consolas_320866.jpg" alt="Consolas">
+            <img class="d-block w-50" src="{% static 'core/img/CarruselPrincipal/consolas_320866.jpg' %}" alt="Consolas">
             <div class="carousel-caption d-none d-md-block">
               <h5>Consolas</h5>
-              <a href=PaginaConsolasDet.html>VER MÁS... </a>
+              <a href="{% url 'consolas' %}">VER MÁS... </a>
             </div>
           </div>
 
-          <div class="carousel-item img-fluid imagen 4">
-            <img class="d-block w-50" src="Imagenes/CarruselPrincipal/fidelidad-plataformas-consolas-1850829.jpg"
+          <div class="carousel-item img-fluid imagen 4"> 
+            <img class="d-block w-50" src="{% static 'core/img/CarruselPrincipal/fidelidad-plataformas-consolas-1850829.jpg' %}"
               alt="Juegos consolas">
             <div class="carousel-caption d-none d-md-block">
               <h5>Videojuegos</h5>

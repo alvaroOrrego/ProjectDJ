@@ -7,3 +7,12 @@ def principal(request):
 
 def contacto(request):
     return render(request, 'core/Contacto.html')
+
+def perifericos(request):
+    return render(request, 'core/PaginaPerifericosDet.html')
+
+def funkos(request):
+    return render(request, 'core/PaginaFunkosDet.html')
+
+def consolas(request):
+    return render(request, 'core/PaginaConsolasDet.html')
