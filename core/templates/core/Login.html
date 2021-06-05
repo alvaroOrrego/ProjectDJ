@@ -20,109 +20,114 @@
 <body>
   
   <!--INICIO MENU-->
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand">
-        <img src="{% static 'core/img/Logo/logofrikitime.png' %}" alt="Logo" id="logo">
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">
+      <img src="{% static 'core/img/Logo/logofrikitime.png' %}" alt="Logo" id="logo">
+    </a>
+
+    <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="{% url 'principal' %}" class="nav-link">
+            <i class="fas fa-home"></i>
+            Inicio
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
+            <i class="fas fa-comment-dollar"></i>
+            Venta
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i>Perifericos</a>
+            <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
+            <a class="dropdown-item" href="{% url 'juegos' %}"><i class="fas fa-gamepad"></i> Videojuegos</a>
+            <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a href="{% url 'contacto' %}" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            Contacto
+          </a>
+        </li>
+        <li class="nav-item dropdown" id="wiki">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
+            <i class="fas fa-asterisk"></i>
+            Friki-Wiki
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'ghibli' %}"><i class="fas fa-hand-point-right"></i> Wiki Ghibli</a>
+            <a class="dropdown-item" href="{% url 'anime' %}"><i class="fas fa-hand-point-right"></i> Wiki Animes</a>
+          </div>
+        </li>
+      </ul>
+
+
+      <a href="{% url 'login' %}" role="button" class="btn btn-light mr-sm-4">
+        <i class="fas fa-user"></i>
+        Iniciar Sesión
       </a>
 
-      <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a href="{% url 'principal' %}" class="nav-link">
-              <i class="fas fa-home"></i>
-              Inicio
-            </a>
-          </li>
+      <a href="{% url 'registro' %}" role="button" class="btn btn-light mr-sm-4">
+        <i class="fas fa-jedi"></i>
+        Registrarse
+      </a>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
-              <i class="fas fa-comment-dollar"></i>
-              Venta
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i>Perifericos</a>
-              <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
-              <a class="dropdown-item" href="{% url 'juegos' %}"><i class="fas fa-gamepad"></i> Videojuegos</a>
-              <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
-            </div>
+      <p> </p>
 
-          </li>
-          <li class="nav-item active">
-            <a href="{% url 'contacto' %}" class="nav-link">
-              <i class="fas fa-envelope"></i>
-              Contacto
-            </a>
-          </li>
-          <li class="nav-item dropdown" id="wiki">
-            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
-              <i class="fas fa-asterisk"></i>
-              Friki-Wiki
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="apiGhibli.html"><i class="fas fa-hand-point-right"></i> Wiki Ghibli</a>
-              <a class="dropdown-item" href="apiAnime.html"><i class="fas fa-hand-point-right"></i> Wiki Animes</a>
-            </div>
-          </li>
-        </ul>
+      <input type="search" id="input-search" placeholder="Buscar . . .">
+      <button type="button" class="btn btn-light mr-sm-4"><i class="fas fa-search"></i></button>
 
-        <a href="{% url 'login' %}" role="button" class="btn btn-light mr-sm-4">
-          <i class="fas fa-user"></i>
-          Iniciar Sesión
-        </a>
+      <div class="content-search">
+        <div class="content-table">
+          <table id="table">
+            <thead>
+              <tr>
+                <td></td>
+              </tr>
+            </thead>
 
-        <a href="Registro.html" role="button" class="btn btn-light mr-sm-4">
-          <i class="fas fa-jedi"></i>
-          Registrarse
-        </a>
+            <tbody>
+              <tr>
+                <td><a href="{% url 'consolas' %}">Consolas</a></td>
+              </tr>
 
-        <p> </p>
+              <tr>
+                <td><a href="{% url 'funkos' %}">Funko pop's</a></td>
+              </tr>
 
-        <input type="search" id="input-search" placeholder="Buscar . . .">
-        <button type="button" class="btn btn-light mr-sm-4"><i class="fas fa-search"></i></button>
-
-        <div class="content-search">
-          <div class="content-table">
-            <table id="table">
-              <thead>
-                <tr>
-                  <td></td>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td><a href="{% url 'consolas' %}">Consolas</a></td>
-                </tr>
-
-                <tr>
-                  <td><a href="{% url 'funkos' %}">Funko pop's</a></td>
-                </tr>
-
-                <tr>
-                  <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
-                </tr>
-                <tr>
-                  <td><a href="{% url 'juegos' %}">Juegos</a></td>
-                </tr>
-                <tr>
-                  <td><a href="apiGhibli.html">Wiki Ghibli</a></td>
-                </tr>
-                <tr>
-                  <td><a href="apiAnime.html">Wiki Animes</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <tr>
+                <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
+              </tr>
+              <tr>
+                <td><a href="{% url 'juegos' %}">Videouegos</a></td>
+              </tr>
+              <tr>
+                <td><a href="{% url 'detalles' %}">Detalles</a></td>
+              </tr>
+              <tr>
+                <td><a href="{% url 'ghibli' %}">Wiki Ghibli</a></td>
+              </tr>
+              <tr>
+                <td><a href="{% url 'anime' %}">Wiki Animes</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+    </div>
 
-    </nav>
-  </div>
-  <!--TERMINO MENU-->
+  </nav>
+</div>
+
+<p></p>
+<!--TERMINO MENU-->
 
   <p></p>
 

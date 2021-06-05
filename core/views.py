@@ -25,3 +25,12 @@ def juegos (request):
 
 def detalles (request):
     return render(request, 'core/PaginaDetalles.html')
+
+def registro (request):
+    return render(request, 'core/Registro.html')
+
+def anime (request):
+    return render(request, 'core/apiAnime.html')
+
+def ghibli (request):
+    return render(request, 'core/apiGhibli.html')

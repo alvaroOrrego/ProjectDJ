@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,26 +11,27 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
     <!--FONTSAWESOME-->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'core/fontawesome/css/all.min.css' %}">
     <!--CSS-->
-    <link rel="stylesheet" href="CSS/apiGhibli.css">
+    <link rel="stylesheet" href="{% static 'core/css/apiGhibli.css' %}">    
 </head>
 <body>
-    <!--INICIO MENU-->
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand">
-            <img src="Imagenes/Logo/logofrikitime.png" alt="Logo" id="logo">
-          </a>
+  <!--INICIO MENU-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <img src="{% static 'core/img/Logo/logofrikitime.png' %}" alt="Logo" id="logo">
+      </a>
 
-    <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+      <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a href="PaginaPrincipal.html" class="nav-link">
+            <a href="{% url 'principal' %}" class="nav-link">
               <i class="fas fa-home"></i>
               Inicio
             </a>
@@ -40,14 +43,14 @@
               Venta
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="PaginaPerifericosDet.html"><i class="fas fa-headphones"></i>Perifericos</a>
-              <a class="dropdown-item" href="PaginaConsolasDet.html"><i class="fab fa-playstation"></i> Consolas</a>
-              <a class="dropdown-item" href="PaginaJuegosDet.html"><i class="fas fa-gamepad"></i> Videojuegos</a>
-              <a class="dropdown-item" href="PaginaFunkosDet.html"><i class="fas fa-dice-one"></i> Funko Pop</a>
+              <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i>Perifericos</a>
+              <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
+              <a class="dropdown-item" href="{% url 'juegos' %}"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
             </div>
           </li>
           <li class="nav-item active">
-            <a href="Contacto.html" class="nav-link">
+            <a href="{% url 'contacto' %}" class="nav-link">
               <i class="fas fa-envelope"></i>
               Contacto
             </a>
@@ -58,18 +61,19 @@
               Friki-Wiki
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="apiGhibli.html"><i class="fas fa-hand-point-right"></i> Wiki Ghibli</a>
-              <a class="dropdown-item" href="apiAnime.html"><i class="fas fa-hand-point-right"></i> Wiki Animes</a>
+              <a class="dropdown-item" href="{% url 'ghibli' %}"><i class="fas fa-hand-point-right"></i> Wiki Ghibli</a>
+              <a class="dropdown-item" href="{% url 'anime' %}"><i class="fas fa-hand-point-right"></i> Wiki Animes</a>
             </div>
           </li>
         </ul>
+
 
         <a href="{% url 'login' %}" role="button" class="btn btn-light mr-sm-4">
           <i class="fas fa-user"></i>
           Iniciar Sesión
         </a>
 
-        <a href="Registro.html" role="button" class="btn btn-light mr-sm-4">
+        <a href="{% url 'registro' %}" role="button" class="btn btn-light mr-sm-4">
           <i class="fas fa-jedi"></i>
           Registrarse
         </a>
@@ -90,24 +94,27 @@
 
               <tbody>
                 <tr>
-                  <td><a href="PaginaConsolasDet.html">Consolas</a></td>
+                  <td><a href="{% url 'consolas' %}">Consolas</a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="PaginaFunkosDet.html">Funko pop's</a></td>
+                  <td><a href="{% url 'funkos' %}">Funko pop's</a></td>
                 </tr>
 
                 <tr>
-                  <td><a href="PaginaPerifericosDet.html">Perifericos</a></td>
+                  <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaJuegosDet.html">Videouegos</a></td>
+                  <td><a href="{% url 'juegos' %}">Videouegos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaDetalles.html">Detalles</a></td>
+                  <td><a href="{% url 'detalles' %}">Detalles</a></td>
                 </tr>
                 <tr>
-                  <td><a href="apiAnime.html">Wiki Animes</a></td>
+                  <td><a href="{% url 'ghibli' %}">Wiki Ghibli</a></td>
+                </tr>
+                <tr>
+                  <td><a href="{% url 'anime' %}">Wiki Animes</a></td>
                 </tr>
               </tbody>
             </table>
@@ -120,8 +127,6 @@
 
   <p></p>
   <!--TERMINO MENU-->
-
-    <p></p>
 
     <div class="container-fluid"></div>
     <h1 class="text-center">FRIKI-WIKI DE STUDIO GHIBLI</h1>
@@ -152,6 +157,14 @@
     <script src="JS/jquery.dataTables.min.js"></script>
     <script src="JS/search.js"></script>
     <script src="JS/apiGhibli.js" ></script>
+
+    <!--USO DE BUSCADOR-->
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'core/js/search.js' %}"></script>
+
+    <!--ApiGhibli-->
+    <script src="{% static 'core/js/apiGhibli.js' %}"></script>
     
 </body>
 </html>
