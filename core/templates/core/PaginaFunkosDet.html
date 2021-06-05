@@ -11,7 +11,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!--FONTSAWESOME-->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'core/fontawesome/css/all.min.css' %}">
     <!--CSS-->
     <link rel="stylesheet" href="{% static 'core/css/PaginaFunkosDet.css' %}">
 
@@ -44,7 +44,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="{% url 'perifericos' %}"><i class="fas fa-headphones"></i> Perifericos</a>
               <a class="dropdown-item" href="{% url 'consolas' %}"><i class="fab fa-playstation"></i> Consolas</a>
-              <a class="dropdown-item" href="PaginaJuegosDet.html"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a class="dropdown-item" href="{% url 'juegos' %}"><i class="fas fa-gamepad"></i> Videojuegos</a>
               <a class="dropdown-item" href="{% url 'funkos' %}"><i class="fas fa-dice-one"></i> Funko Pop</a>
             </div>
             
@@ -55,7 +55,7 @@
               Contacto
             </a>
           </li>
-          <li class="nav-item dropdown" id="apiGhibli">
+          <li class="nav-item dropdown" id="wiki">
             <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
               <i class="fas fa-asterisk"></i>
               Friki-Wiki
@@ -99,10 +99,10 @@
                   <td><a href="{% url 'perifericos' %}">Perifericos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaJuegosDet.html">Videojuegos</a></td>
+                  <td><a href="{% url 'juegos' %}">Videojuegos</a></td>
                 </tr>
                 <tr>
-                  <td><a href="PaginaDetalles.html">Detalles</a></td>
+                  <td><a href="{% url 'detalles' %}">Detalles</a></td>
                 </tr>
                 <tr>
                   <td><a href="apiGhibli.html">Wiki Ghibli</a></td>
@@ -130,11 +130,11 @@
     <div class="card-deck">
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/levi_clean.jpg"
+          src="{% static 'core/img/Funkos/levi_clean.jpg' %}"
           alt="Funko Cleaning Levi">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP SNK: CLEANING LEVI</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">89.990 $ CLP</small>
@@ -142,11 +142,11 @@
       </div>
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/anakin_darkside.jpg"
+          src="{% static 'core/img/Funkos/anakin_darkside.jpg' %}"
           alt="Funko Anakin Dark Side">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP STAR WARS: ANAKIN SKYWALKER DARK SIDE</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">59.990 $ CLP</small>
@@ -154,11 +154,11 @@
       </div>
       <div class="card">
         <img class="card-img-top" 
-          src="Imagenes/Funkos/mandalorian-the-child.jpg"
+          src="{% static 'core/img/Funkos/mandalorian-the-child.jpg' %}"
           alt="Funko Mandalorian">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP STAR WARS: THE MANDALORIAN</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">24.990 $ CLP</small>
@@ -175,11 +175,11 @@
     <div class="card-deck">
       <div class="card">
         <img class="card-img-top" 
-          src="Imagenes/Funkos/john_wick.jpg"
+          src="{% static 'core/img/Funkos/john_wick.jpg' %}"
           alt="Funko John Wick">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP CHASE JOHN WICK</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">29.990 $ CLP</small>
@@ -187,11 +187,11 @@
       </div>
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/pain.jpg"
+          src="{% static 'core/img/Funkos/pain.jpg' %}"
           alt="Funko Pain">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP NARUTO: PAIN</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">19.990 $ CLP</small>
@@ -199,11 +199,11 @@
       </div>
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/eren_titan.jpg"
+          src="{% static 'core/img/Funkos/eren_titan.jpg' %}"
           alt="Funko Eren Titan Rage">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP SNK: EREN TITAN FORM (RAGE)</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">149.990 $ CLP</small>
@@ -220,11 +220,11 @@
     <div class="card-deck">
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/ahsoka_sw.jpg"
+          src="{% static 'core/img/Funkos/ahsoka_sw.jpg' %}"
           alt="Funko Ahsoka">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP STAR WARS: AHSOKA - CLONE WARS</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">19.990 $ CLP</small>
@@ -232,11 +232,11 @@
       </div>
       <div class="card">
         <img class="card-img-top" 
-          src="Imagenes/Funkos/illidan_wow.jpg"
+          src="{% static 'core/img/Funkos/illidan_wow.jpg' %}"
           alt="Funko Illidan">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP WOW: ILLIDAN</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">19.990 $ CLP</small>
@@ -244,11 +244,11 @@
       </div>
       <div class="card">
         <img class="card-img-top"
-          src="Imagenes/Funkos/goku.jpg"
+          src="{% static 'core/img/Funkos/goku.jpg' %}"
           alt="Funko Goku">
         <div class="card-body">
           <h5 class="card-title">FUNKO POP DBS: GOKU ULTRA INSTINTO</h5>
-          <a href="PaginaDetalles.html" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
+          <a href="{% url 'detalles' %}" class="btn btn-info btn-md active" role="button" aria-pressed="true">DETALLES</a>
         </div>
         <div class="card-footer">
           <small class="text-muted">14.900 $ CLP</small>
@@ -260,7 +260,7 @@
     <br>
     <div class="d-flex justify-content-center" id="tiempo">
       <div class="card weather">
-          <img src="Imagenes/iconoApiClima/2639.png" class="card-img-top weather-icon" alt="Sin Dato" id="imagen-clima">
+          <img src="{% static 'core/img/iconoApiClima/2639.png' %}" class="card-img-top weather-icon" alt="Sin Dato" id="imagen-clima">
           <div class="card-body">
               <h5 class="card-title weather-descrip">Sin Datos</h5>
               <p class="card-text weather-temp"><b>geolocalización no compartida</b><br><b></b></p>
@@ -277,9 +277,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="JS/jquery.js"></script>
-    <script src="JS/jquery.dataTables.min.js"></script>
-    <script src="JS/search.js"></script>
-    <script src="JS/openWeatherMap.js"></script>
+
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'core/js/search.js' %}"></script>
+
+    <script src="{% static 'core/js/openWeatherMap.js' %}"></script>
 </body>
 </html>
