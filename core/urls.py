@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import principal, contacto, perifericos, funkos, consolas, login, juegos, detalles, registro, anime, ghibli, listadoprod, admin
+from .views import principal, contacto, perifericos, funkos, consolas, login, juegos, detalles, registro, anime, ghibli, listadoprod, admin, add_producto
 
 urlpatterns = [
     path('', principal, name="principal"),
@@ -14,5 +14,6 @@ urlpatterns = [
     path('anime/', anime, name="anime"),
     path('ghibli/', ghibli, name="ghibli"),
     path('listadoproductos/', listadoprod, name="listadoprod"),
-    path('admin/', admin, name="admin")
+    path('admin/', admin, name="admin"),
+    path('agregar-producto/', add_producto, name="add-producto")
 ]

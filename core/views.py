@@ -1,3 +1,4 @@
+from django.http import request
 from django.shortcuts import render
 from .models import Producto
 from .forms import ProductoForm
@@ -56,3 +57,14 @@ def listadoprod(request):
         'productos': productos
     }
     return render(request, 'core/listadoProductos.html', datos)
+
+
+def add_producto(request):
+    datos = {'form': ProductoForm()}
+    if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado Correctamente"
+            
+    return render(request, 'core/add_producto.html', datos)
