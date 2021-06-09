@@ -142,7 +142,7 @@
 
     <div class="container">
         <h2>Agregar Productos</h2>
-        <form method="POST" action="" id="add-vehiculo">
+        <form method="POST" action="" id="add-vehiculo" enctype= multipart/form-data>
             {% csrf_token %}
             <div class="form-group">
                 {{ form.as_table }}
