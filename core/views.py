@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from .models import Producto
+from .forms import ProductoForm
 
 # Create your views here.
+
+#Vistas de cada ventana del sitio web
 
 def principal(request):
     return render (request, 'core/PaginaPrincipal.html')
@@ -34,3 +38,21 @@ def anime (request):
 
 def ghibli (request):
     return render(request, 'core/apiGhibli.html')
+
+#-----------------------------------------------------------------------------------------
+
+#--------------------- Vista Zona Admin:
+
+def admin (request):
+    return render(request, 'core/admin.py')
+
+#------------------------------ Vistas CRUD
+
+#---- Listado de Productos:
+
+def listadoprod(request):
+    productos = Producto.objects.all()
+    datos = {
+        'productos': productos
+    }
+    return render(request, 'core/listadoProductos.html', datos)
