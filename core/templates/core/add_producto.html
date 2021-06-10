@@ -145,7 +145,7 @@
         <form method="POST" action="" id="add-vehiculo" enctype= multipart/form-data>
             {% csrf_token %}
             <div class="form-group">
-                {{ form.as_table }}
+                {{ form.as_p }}
             </div>
 
             <input type="submit" class="btn btn-success" id="enviar" value="Agregar">
