@@ -1,5 +1,5 @@
 from django.http import request
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Producto
 from .forms import ProductoForm
 
@@ -68,3 +68,25 @@ def add_producto(request):
             datos['mensaje'] = "Guardado Correctamente"
             
     return render(request, 'core/add_producto.html', datos)
+
+
+def edit_producto(request, pk):
+    producto = Producto.objects.get(idProducto=pk)
+
+    if request.method == 'POST':
+        formulario_edit = ProductoForm(request.POST, request.FILES, instance=producto)
+        if formulario_edit.is_valid:
+            formulario_edit.save()
+            return redirect(to="listadoprod")
+
+    else:
+        datos = {
+            'form': ProductoForm(instance=producto) 
+        }
+        return render(request, 'core/edit_producto.html', datos)
+
+
+def elim_producto(request, pk):
+    producto = Producto.objects.get(idProducto=pk)
+    producto.delete()
+    return redirect(to="listadoprod")
