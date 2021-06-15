@@ -8,8 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantenedor de Productos</title>
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--FONTSAWESOME-->
+    <link rel="stylesheet" href="{% static 'core/fontawesome/css/all.min.css' %}">
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'core/css/editarCrud.css' %}">
 
 </head>
 <body>
@@ -70,9 +75,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="{% url 'admin' %}"><i class="fas fa-crown"></i> Zona Admin</a>
               <a class="dropdown-item" href="{% url 'add-producto' %}"><i class="fas fa-plus-square"></i> Agregar</a>
-              <a class="dropdown-item" href="{% url 'listadoprod' %}"><i class="fas fa-edit"></i> Editar</a>
               <a class="dropdown-item" href="{% url 'listadoprod' %}"><i class="fas fa-list-ol"></i> Listado</a>
-              <a class="dropdown-item" href="{% url 'listadoprod' %}"><i class="fas fa-trash-alt"></i> Eliminar</a>
             </div>
           </li>
         </ul>
@@ -140,8 +143,12 @@
   <!--TERMINO MENU-->
 
 
-    <div class="container">
-        <h2>Editar Productos</h2>
+    <div class="container-fluid">
+      <section class="contact-box" id="contacto2">
+        <div class="row no-gutters bg-dark" id="cuadro2">
+          <div class= "col-xl-9 col-lg-10 mx-auto">
+            <div class= "bg-faded rounded p-5">
+            <h2>EDITAR PRODUCTOS</h2>
         <form method="post" action="" id="formulario-editar"  enctype= multipart/form-data>
             {% csrf_token %}
             <div class="form-group">
@@ -151,9 +158,10 @@
             <input type="submit" class="btn btn-primary" id="enviar" value="Editar">
             <input type="reset" class="btn btn-secondary" id="limpiar" value="Limpiar">
 
-        </form>
-
-
+            
+          </form>
+        </div>
+      </section>
     </div>
  
     

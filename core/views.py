@@ -42,14 +42,14 @@ def ghibli (request):
 
 #-----------------------------------------------------------------------------------------
 
-#--------------------- Vista Zona Admin:
+#----------------------------- Vista Zona Admin:
 
 def admin (request):
     return render(request, 'core/admin.py')
 
 #------------------------------ Vistas CRUD
 
-#---- Listado de Productos:
+#---- Listar productos:
 
 def listadoprod(request):
     productos = Producto.objects.all()
@@ -58,6 +58,7 @@ def listadoprod(request):
     }
     return render(request, 'core/listadoProductos.html', datos)
 
+#---- Agregar productos:
 
 def add_producto(request):
     datos = {'form': ProductoForm()}
@@ -69,6 +70,7 @@ def add_producto(request):
             
     return render(request, 'core/add_producto.html', datos)
 
+#---- Editar productos:
 
 def edit_producto(request, pk):
     producto = Producto.objects.get(idProducto=pk)
@@ -85,6 +87,8 @@ def edit_producto(request, pk):
         }
         return render(request, 'core/edit_producto.html', datos)
 
+
+#---- Eliminar productos:
 
 def elim_producto(request, pk):
     producto = Producto.objects.get(idProducto=pk)
