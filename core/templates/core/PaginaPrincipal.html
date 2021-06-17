@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="{% static 'core/fontawesome/css/all.min.css' %}">
   <!--CSS-->
   <link rel="stylesheet" href="{% static 'core/css/PaginaPrincipal.css' %}">
+  <!--GSAP-->
+  <script src= https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js></script>
 
 </head>
 
@@ -26,10 +28,6 @@
       <a class="navbar-brand">
         <img src="{% static 'core/img/Logo/logofrikitime.png' %}" alt="Logo" id="logo">
       </a>
-
-      <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -143,8 +141,6 @@
 
   <!--INICIO CARRUSEL-->
   <div class="container-fluid">
-    <div class="text-center">
-
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -198,7 +194,6 @@
         </a>
       </div>
     </div>
-  </div>
   <!--TERMINO CARRUSEL-->
   <p></p>
 
@@ -295,7 +290,7 @@
           <img src="{% static 'core/img/iconoApiClima/2639.png' %}" class="card-img-top weather-icon" alt="Sin Dato" id="imagen-clima">
           <div class="card-body">
               <h5 class="card-title weather-descrip">Sin Datos</h5>
-              <p class="card-text weather-temp"><b>geolocalización no compartida</b><br><b></b></p>
+              <p class="card-text weather-temp"><b>Geolocalización no compartida</b><br><b></b></p>
           </div>
       </div>
     </div>
@@ -321,6 +316,8 @@
   <script src="{% static 'core/js/search.js' %}"></script>
 
   <script src="{% static 'core/js/openWeatherMap.js' %}"></script>
+
+  <script src="{% static 'core/js/animacionesPrincipal.js' %}"></script>
 </body>
 
 </html>
