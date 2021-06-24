@@ -1,6 +1,8 @@
 from django.urls import path
-from api_FrikiTime.views import productos
+from api_FrikiTime.views import productos, producto
 
 urlpatterns = [
-    path('producto/', productos, name='productos'),
+    path('productos/', productos, name='productos'),
+    path('producto/<pk>', producto, name='producto'),
+
 ]

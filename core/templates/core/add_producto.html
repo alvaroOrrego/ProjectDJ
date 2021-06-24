@@ -154,21 +154,25 @@
           <form method="POST" action="" id="add-vehiculo" enctype= "multipart/form-data">
               {% csrf_token %}
               <div class="form-group">
-                
-                    {{ form.as_p }}
-
+                <table>
+                    {{ form.as_table}}
+                </table>
               </div>
 
               <input type="submit" class="btn btn-success" id="enviar" value="Agregar">
               <input type="reset" class="btn btn-secondary" id="limpiar" value="Limpiar">
-
         </form>
-
         <p>
             <div id="respuesta" class="alert alert-success" role="alert">{{ mensaje }}</div>
         </p>
 
-    </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <p><br><br><small id="emailHelp" class="form-text text-muted text-center">Todos los derechos reservados © Friki
+      Blinders, 2021</small><br></p>
  
     
 

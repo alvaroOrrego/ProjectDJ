@@ -151,7 +151,7 @@
           <div class= "col-xl-9 col-lg-10 mx-auto">
             <div class= "bg-faded rounded p-5">
             <h2 class="text-left">EDITAR PRODUCTOS</h2>
-        <form method="post" action="" id="formulario-editar"  enctype= multipart/form-data>
+        <form method="POST" action="" id="formulario-editar"  enctype= "multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 {{ form.as_p }}
@@ -159,12 +159,16 @@
 
             <input type="submit" class="btn btn-primary" id="enviar" value="Editar">
             <input type="reset" class="btn btn-secondary" id="limpiar" value="Limpiar">
-
-            
-          </form>
+      
+            </form>
+            </div>
+          </div>
         </div>
       </section>
     </div>
+
+    <p><br><br><small id="emailHelp" class="form-text text-muted text-center">Todos los derechos reservados © Friki
+      Blinders, 2021</small><br></p>
  
     
 
