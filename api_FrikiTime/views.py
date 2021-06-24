@@ -13,6 +13,9 @@ from rest_framework.decorators import api_view
 def productos(request):
 
     if request.method =='GET':
+        """
+        GET: Listar productos
+        """
         productos_lista = Producto.objects.all()
         serializer = ProductoSerializer(productos_lista, many=True)
         return Response(serializer.data)
@@ -38,7 +41,7 @@ def producto(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     """
-    GET: Mostrar detalle de un vehiculo según id
+    GET: Mostrar detalle de un producto según id
     """
     if request.method == 'GET':
         serializer = ProductoSerializer(producto)
@@ -47,7 +50,7 @@ def producto(request, pk):
     elif request.method == 'PUT':
 
         """
-        PUT: Editar un vehiculo por id
+        PUT: Editar un producto por id
         """
         data = JSONParser().parse(request)
         serializer = ProductoSerializer(producto, data=data)
@@ -62,7 +65,7 @@ def producto(request, pk):
     elif request.method == 'DELETE':
 
         """
-        DELETE: Borrar un vehiculo por patente
+        DELETE: Borrar un producto por id
         """
         producto.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

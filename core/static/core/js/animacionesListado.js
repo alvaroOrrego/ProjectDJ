@@ -16,9 +16,4 @@ tl.from('.table', {
     stagger: 0,
 });
 
-tl.from('#emailHelp', {
-    duration: 0.5,
-    scale: 0,
-    stagger: 0,
-});
 
